@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Themable vertical stepper component</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Material+Icons'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vuetify@2.2.26/dist/vuetify.min.css'>
+<link rel='stylesheet' href='./style.css'>
+
+</head>
+<body>
+<div id="app">
+  <v-app id="inspire">
+    <v-stepper v-model="e6" vertical>
+      <v-stepper-step :complete="e6 > 1" step="1" @click="e6 = 2" class="first-step">
+        Step 1
+      </v-stepper-step>
+  
+      <v-stepper-content step="1" @click="e6 = 2">
+        <v-card color="grey lighten-1" class="mb-12">Sed ut perspiciatis, unde omnis iste natus error sit
+           voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et 
+           quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur 
+           aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt</v-card>
+      </v-stepper-content>
+  
+      <v-stepper-step :complete="e6 > 2" step="2" @click="e6 = 3">Step 2</v-stepper-step> 
+  
+      <v-stepper-content step="2" @click="e6 = 3">
+        <v-card color="grey lighten-1" class="mb-12" >Sed ut perspiciatis, unde omnis iste natus error sit
+          voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et 
+          quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur 
+          aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt</v-card>
+      </v-stepper-content>
+  
+      <v-stepper-step :complete="e6 > 3" step="3" @click="e6 = 4">Step 3</v-stepper-step>
+  
+      <v-stepper-content step="3" @click="e6 = 4">
+        <v-card color="grey lighten-1" class="mb-12">Sed ut perspiciatis, unde omnis iste natus error sit
+          voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et 
+          quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur 
+          aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt</v-card>
+      </v-stepper-content>
+
+  </v-app>
+</div>
+
+
+<!-- Having All scripts on the button of the page helps with page load times
+    Using CDN reduce Packet Loss and Lower Network Latency -->
+<script src='https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vuetify@2.2.26/dist/vuetify.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
